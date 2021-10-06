@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fb</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="fontawesome.css">
+    <style>
+        .header .fab{
+                color: lightgray;
+        }
+        .header{
+            background-color: rgb(55, 109, 202);
+            height: 40px;
+            padding-left:200px ;
+            line-height: 40px;
+        }
+        input{
+            height: 20px;
+        }
+        .main-content{
+            margin-left: 200px;
+            width: 851px;
+            border: 0.5px solid gray;
+        }
+        .covar{
+            background-image: url("cover.jpg");
+            background-size: 851px 315px;
+            height: 315px;
+        
+        }
+        .profile-pic{
+            background-image: url("labibboss.jpg");
+            background-size: 160px 160px;
+            height: 160px;
+            width: 160px;
+            position: relative;
+            top: 180px;
+            left: 15px;
+            border: 1px solid gray;
+
+        }
+         .tim{
+             position: relative;
+             margin-top: 180px;
+         }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <i class="fab fa-facebook-square"></i>
+        <input type="text" placeholder="labib">
+        <span>home</span>
+    </div>
+    <div class="main-content">
+        <div class="covar">
+            <div class="profile-pic"></div>
+        <form class="tim">
+        <textarea placeholder="Whats on your mind?"name="" id="status" cols="70" rows="4"></textarea>
+        <br>
+        <button onclick="poststatus()" class="btn btn-success">Post</button>
+        <div id="posts"></div>
+    </form>
+    <script>
+        function poststatus(){
+            var textElement = document.getElementById("status");
+            var atatus = textElement.value;
+            alert(status);
+            var postContainer = document.getElementById("posts");
+            postContainer.append(status);
+        }
+    </script>
+</body>
+</html>
